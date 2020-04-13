@@ -6,6 +6,16 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
   end
+  
+  def pick
+    while true
+      ran = rand(1..Movie.last.id)
+      @movie = Movie.exists?(ran) ? Movie.find(ran) : nil
+      if(!@movie.nil?)
+        break
+      end
+    end
+  end
 
   # GET /movies/1
   # GET /movies/1.json
