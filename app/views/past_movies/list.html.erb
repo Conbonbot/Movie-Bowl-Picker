@@ -1,0 +1,13 @@
+<h1>Past Movies</h1>
+<table>
+    <tr>
+        <th>Movie</th>
+        <th>Watched</th>
+    </tr>
+    <% @past_movies.each do |movie| %>
+        <tr>
+            <td><%= movie.name %> | </td>
+            <td><%= time_ago_in_words(movie.watched) %></td>
+        </tr>
+    <% end %>
+</table>
