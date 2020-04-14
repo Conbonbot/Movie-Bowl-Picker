@@ -15,7 +15,6 @@ class MoviesController < ApplicationController
         break
       end
     end
-    PastMovie.create(name: @movie.name, watched: Time.zone.now)
   end
 
   # GET /movies/1

@@ -1,5 +1,5 @@
 <h1>Picked Movie</h1>
 <p>The picked movie was: <%= @movie.name %> </p>
 <%= link_to "Chose Another", pick_path %>
-<%= link_to "Use", @movie, method: :delete %>
+<%= link_to "Use", new_pick_with_parameter_path(@movie) %>
 <%= link_to "Back to list", root_path %>
